@@ -1,11 +1,7 @@
 <?php
-for ($i = 2; $i <= 10; $i += 2) {
-    echo "$i\n";
-}
+$names = ["혁준" , "우영" , "찬호"];
 
-$names = ["민수", "지우" , "영희"];
-foreach ($names as $name) {
-    echo "안녕 $name\n";
+foreach ($names as $index => $name) {
+    echo "{$index}번 학생: 안녕 {$name}\n";
 }
-
 ?>
