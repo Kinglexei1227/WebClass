@@ -11,7 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);  // DB에 저장
 
     if ($result) {
-        echo "✅ 회원가입 성공!";
+        // 성공 시 로그인 페이지로 이동
+        header("Location: login.php");
+        exit();
     } else {
         echo "❌ 실패: " . $conn->error;
     }
