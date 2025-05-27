@@ -1,0 +1,31 @@
+// 할 일 추가 함수
+function addTodo() {
+  // 1. 입력창에서 값 가져오기
+  const input = document.getElementById("todoInput");
+  const newTodo = input.value.trim(); // 앞뒤 공백 제거
+
+  // 2. 입력값이 비어있지 않으면
+  if (newTodo !== "") {
+    // 3. 새로운 <li> 항목 만들기
+    const li = document.createElement("li");
+    li.textContent = newTodo;
+
+    // 4. 삭제 버튼 만들기
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+
+    // 5. 삭제 버튼 클릭 시 해당 항목 삭제
+    deleteBtn.onclick = function () {
+      li.remove(); // 해당 li 항목 제거
+    };
+
+    // 6. li에 삭제 버튼 붙이기
+    li.appendChild(deleteBtn);
+
+    // 7. 리스트에 추가
+    document.getElementById("todoList").appendChild(li);
+
+    // 8. 입력창 초기화
+    input.value = "";
+  }
+}
