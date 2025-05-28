@@ -9,23 +9,28 @@ function addTodo() {
     // 3. 새로운 <li> 항목 만들기
     const li = document.createElement("li");
     li.textContent = newTodo;
+    
+    // 4. 클릭하면 완료 상태 토글
+    li.onclick = function () {
+      li.classList.toggle("completed");
+    };
 
-    // 4. 삭제 버튼 만들기
+    // 5. 삭제 버튼 만들기
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "❌";
-
-    // 5. 삭제 버튼 클릭 시 해당 항목 삭제
+    
+    // 6. 삭제 버튼 클릭 시 해당 항목 삭제
     deleteBtn.onclick = function () {
       li.remove(); // 해당 li 항목 제거
     };
 
-    // 6. li에 삭제 버튼 붙이기
+    // 7. li에 삭제 버튼 붙이기
     li.appendChild(deleteBtn);
 
-    // 7. 리스트에 추가
+    // 8. 리스트에 추가
     document.getElementById("todoList").appendChild(li);
 
-    // 8. 입력창 초기화
+    // 9. 입력창 초기화
     input.value = "";
   }
 }
