@@ -1,4 +1,4 @@
-const person = { // 객체 선언
+const person = { // 객체 선언 
     name: "지수",
     age: 24
 };
