@@ -14,7 +14,7 @@ function addTodo() {
     li.onclick = function () {
       li.classList.toggle("completed");
     };
-
+    
     // 5. 삭제 버튼 만들기
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "❌";
