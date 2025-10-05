@@ -1,6 +1,6 @@
 // 예시 1번
 const add = (x, y) => {
-    return x = y;
+    return x + y;
 }
 
 // 1번 예시 실행 결과
